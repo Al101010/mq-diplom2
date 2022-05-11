@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*background-color: red;gray purple;*/ 
+}
+
+/* __________________________________ POPUP */
+._hidden {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 340px;
+  z-index: 10;
+}
+
+.darkening {
+  display: flex;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+/* Кнопка: Закрыть окно POPUP */
+    
+.popup__close {
+    width: 1.4em;
+    height: 1em;
+    font-size: 20px;
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.popup__close:before, .popup__close:after {
+    width: 1.4em;
+    height: 0.2em;
+    content: "";
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.popup__close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup__close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

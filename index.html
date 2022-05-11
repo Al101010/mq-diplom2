@@ -6,10 +6,51 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<title>mq-diploma</title>
 </head>
+<!-- popup -->
+
+<div class="_hidden">
+  <div class="darkening"></div>
+  <div class="popup">
+    <form>
+      <h3 class="popup-title">ваш фидбек</h3>
+      <div class="form-group">
+        <label class="select-group">
+          <span class="select-label">Как часто вы заходите на сайт?</span>
+          <select class="select">
+            <option value="everyDay" selected>Каждый день</option>
+            <option value="almostEveryDay" selected>Почти каждый день</option>
+          </select>
+        </label>
+      </div>
+      <p class="popup-p">Вы подписаны на e-mail рассылку?</p>
+      <div class="radio-label">
+        <label>
+          <input class="radio" type="radio" name="mailing-list" checked>
+          <span class="mailing-list-text">Да</span>
+        </label>
+        <label>
+          <input class="radio" type="radio" name="mailing-list">
+          <span class="mailing-list-text">Нет</span>
+        </label>
+      </div>
+      <div class="text-field">
+        <label class="text-field_label">Расскажите, какой контент вы хотели-бы видеть на нашем сайте</label>
+        <textarea class="text-field_input" type="textarea" name="popup" placeholder="Может, больше рецептов?"></textarea>
+      </div>
+      <div class="to_send-row">
+        <button class="to_send-button"><span>Отправить</span></button>
+      </div>
+    </form>
+    <button class="popup__close" type="button">Закрыть окно</button>
+  </div>
+</div>
+
+
+
 <!-- header -->
 <header class="header">
       <div class="hamb"><span class="hamb-line"></span></div>	
-  <container class="header-container">
+  <div class="header-container">
     <nav class="menu-header">
       <div><a class="logo" href="#0"><img src="svg/noemi-logo.svg" alt="Logo Noemi"></a></div>   
       <ul class="menu-header-list">
@@ -36,7 +77,7 @@
     <div class="header-title">
       <h1>Блог о творчестве, спорте, и образе жизни<h1>
     </div>
-  </container>
+  </div>
 </header>
 <!-- ----------------------------------------------сейчас в тренде--------- -->
 <div class="container_trends">
@@ -107,7 +148,7 @@
   </section>
 </div>
 
-<!--_____________________________________________________________________________mail_________-->
+<!--_____________________________________________________________________________main_________-->
 
   <div class="box">
    <div class="box-wrapper">
@@ -115,7 +156,9 @@
     <main class="main">
       
       <article class="news">
-        <a class="" href="#0"><img class="news-img" src="images/last-post1.jpg" alt="картинка человек идёт по пляжу"></a>
+        <div class="news-img">
+          <a class="" href="#0"><img class="news-img-a" src="images/last-post1.jpg" alt="картинка человек идёт по пляжу"></a>
+        </div>
         <div class="news-text">         
           <ul class="news-travel">
             <li class="news-li">
@@ -141,7 +184,9 @@
       </article>
 
       <article class="news">
-        <a class="" href="#0"><img class="news-img" src="images/last-post2.jpg" alt="йога на пляже"></a>
+        <div class="news-img">
+          <a class="" href="#0"><img class="news-img-a" src="images/last-post2.jpg" alt="йога на пляже"></a>
+        </div>
         <div class="news-text">
           <ul class="news-travel">
             <li class="news-li">
@@ -167,7 +212,9 @@
       </article>
  
       <article class="news">
-        <a class="" href="#0"><img class="news-img" src="images/last-post3.jpg" alt="девушка на фестивале"></a>
+        <div class="news-img">
+          <a class="" href="#0"><img class="news-img-a" src="images/last-post3.jpg" alt="девушка на фестивале"></a>
+        </div>
         <div class="news-text">
           <ul class="news-travel">
             <li class="news-li">
@@ -191,7 +238,9 @@
       </article>
 
       <article class="news">
-        <a class="" href="#0"><img class="news-img" src="images/last-post4.jpg" alt="тарелки с едой"></a>
+        <div class="news-img">
+          <a class="" href="#0"><img class="news-img-a" src="images/last-post4.jpg" alt="тарелки с едой"></a>
+        </div>
         <div class="news-text">
           <ul class="news-travel">
             <li class="news-li">
@@ -217,7 +266,9 @@
       </article>
 
       <article class="news">
-        <a class="" href="#0"><img class="news-img" src="images/last-post5.jpg" alt="подушка"></a>
+        <div class="news-img">
+          <a class="" href="#0"><img class="news-img-a" src="images/last-post5.jpg" alt="подушка"></a>
+        </div>
         <div class="news-text">
           <ul class="news-travel">
             <li class="news-li">

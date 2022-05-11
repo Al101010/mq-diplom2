@@ -19,6 +19,212 @@
   padding:0;
 }
 
+/*_________________________________________POPUP*//**/
+._hidden {
+  display: none;/*flex;*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+    z-index: 98;
+}
+
+.popup {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 340px;
+  z-index: 100;
+}
+
+.darkening {
+  display: flex;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.popup-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.popup-title::after {
+  content:"";
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 66px;
+  height: 3px;
+  background:#b59f5b;
+}
+
+.popup-p {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+    /* ПОЛЕ: select - как часто вы заходите */
+
+.form-group {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.select {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 5px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ffffff;
+  padding: 0 25px 0 10px;
+  background-color:#f4f7f6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../svg/form-arrows.svg");
+  background-size: 10px 20px;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+
+/*.select:focus {
+  border: 2px solid #b59f5b;
+}*/
+
+.select:hover {
+  border: 2px solid #b59f5b;
+}
+
+.radio-label {
+  margin-top: 8px;
+  /*width: 10px;*/
+}
+
+.mailing-list-text:nth-child(n+2) {
+  margin-right: 15px;
+  /*margin-left: 5px;*/
+}
+
+.mailing-list-text::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.radio:checked ~ .mailing-list-text::before {
+  background-image: url("../svg/form-circle.svg");
+}
+
+.radio {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+
+.text-field {
+  margin-top: 25px;
+}
+
+.text-field_label {}
+
+.text-field_input {
+  margin-top: 5px;
+  padding: 10px;
+  height: 120px;
+  width: 100%;
+  border: 1px solid #ffffff;
+  background-color: #f4f7f6;
+}
+
+.text-field_input:focus {
+  border: 2px solid #b59f5b;  
+}
+
+.text-field_input:hover {
+  border: 2px solid #b59f5b;  
+}
+
+textarea {
+  resize: none;
+}
+
+/* Кнопка: ОТПРАВИТЬ */
+
+.to_send-row {
+  display: flex;
+  margin-top: 20px;
+}
+
+.to_send-button {
+  background-color: #b59f5b;
+  border: 2px solid currentColor;
+  cursor: pointer;
+  padding: 10px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.to_send-button:hover {
+  background-color: #000000;
+}
+
+/* Кнопка: Закрыть окно POPUP */
+    
+.popup__close {
+    width: 1.4em;
+    height: 1em;
+    font-size: 20px;
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.popup__close:before, .popup__close:after {
+    width: 1.4em;
+    height: 0.2em;
+    content: "";
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.popup__close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup__close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
 /*_________________________________________Heder - банер*/
 .header {
   font-family: "Open Regular", sans-serif;
@@ -29,7 +235,7 @@
   color: #ffffff;
   position: relative;
   box-sizing: border-box;
-  padding: 25px 145px 125px 245px;
+  padding: 0 10vw 0 10vw;/*25px 145px 125px 245px;*/
   z-index:0;
 }
 
@@ -220,7 +426,7 @@ h1 {
   margin-top: 5px;
 }
 
-/*________________________________________________________body*/
+/*________________________________________________________ main*/
 
 .main {
   display: flex;
@@ -239,19 +445,25 @@ h1 {
 
 .news-text {
   display: block;
-  margin: 0 0 0 10px;
+  margin-left: 30px;
 }
 
 .news-img {
-  width: 380px;
-  margin: 0 20px 0 0;
+  min-width: 380px;
+  min-height: 100px;
+}
+
+.news-img-a {
+  margin: 0 0 0 0;
 }
 
 .news-travel {
+  display: flex;
   list-style-type: none;
   display: flex;
   padding: 0px 5px 0 3px;
   font-weight: 700;
+  flex-wrap: wrap;
 }
 
 .news-name {
@@ -374,6 +586,8 @@ h3.top {
 
 .new-img {
   padding-top: 3px;
+  max-width: 70px;
+  min-width: 70px;
 }
 
 .new-text {
@@ -746,7 +960,6 @@ li.list-theme-item {
 
   .header {
     background-image: url("../images/banner-mobile.jpg");
-    padding: 0 10vw 0 10vw;
     width: 100vw;
     height: 100vh;
   }
@@ -822,14 +1035,12 @@ li.list-theme-item {
   }
 }
 
-
-/*=================================================================================================tablet от 641 до 1200*/
+/*==============================================================================tablet от 641 до 1200*/
 
 @media (min-width: 641px) and (max-width: 1199px) {
   
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
-    padding: 0 10vw 0 10vw;
     height: 350px;
   }
 
@@ -932,13 +1143,19 @@ li.list-theme-item {
   }
 }
 
-/*______________________________________________________________________________desctop 1200 и более*/
+/*==============================================================================desctop 1200 и более*/
 
 @media (min-width: 1200px) {
   
   .header {
     background-image: url("../images/banner-bg.jpg");
+    padding: 25px 10vw 125px 10vw;
+
   }
+
+  /*.header-container {
+    max-width: 1200px;    
+  }*/
 
   .logo {
     display: flex;
@@ -1065,5 +1282,20 @@ li.list-theme-item {
 
   .footer_copirate {
     margin-top: 70px;
+  }
+}
+
+
+/*==============================================================================desctop 1920 и более*/
+
+@media (min-width: 1920px) {
+  
+  .header {
+    background-image: url("../images/banner-bg.jpg");
+    padding: 25px 10vw 125px 10vw;
+  }
+
+  .header-container {
+    max-width: 1200px;    
   }
 }
